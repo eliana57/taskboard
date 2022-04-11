@@ -1,0 +1,275 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.main{
+    text-align: center;
+
+}
+
+input,textarea{
+    height: 40px;
+    outline: none;    
+    border: none;
+    font-size:16px;
+}
+
+#span {
+    font-size:12px; 
+    color: red;
+}
+
+img {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+  }
+
+/* my name */
+marquee{
+    font-weight:"bolder";
+     font-size:50px;
+     position:relative;
+     top:30px;
+}
+
+
+/* my task board */
+h1{
+   
+    font-family:'Waiting for the Sunrise';
+    font-size: 70px ;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top:35px;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+    text-align: center;
+}
+
+h1:hover{
+    font-size:80px;
+    -webkit-text-fill-color: transparent; 
+}
+
+
+h1 {
+    animation-name:grow;
+    animation-duration:2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes grow {
+    0% {transform: translateX(10px);}
+    50% {transform: translateX(-10px);}
+    100% {transform: translateX(10px);}
+}
+
+
+/* background */
+body{
+    background-image: url('img/cork.jpg');
+    height:100%;
+    width:100%;
+}
+
+
+/* image  lines*/
+.container1{
+    background-image: url('img/form.jpg'), radial-gradient(circle at top left, #f00,#3020ff) ;
+    background-repeat:repeat-y;
+    background-size: 920px;
+    top:150px;
+    width:900px;
+    height:240px;
+    border: double 4px transparent;
+    border-radius: 50px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+ } 
+
+
+
+div .container1{
+     margin:auto;
+ }
+
+
+/* task title */
+.container1 div:nth-child(1){
+    position:relative;
+    left:0;
+    top:17px;
+    font-weight: bold;
+    font-size: 31px;
+}
+
+ /* enter task */
+.container1 div:nth-child(2){
+     position:relative;
+     left:-30px;
+     top:30px;
+     font-weight: bold;
+    font-size: 31px;
+
+ }
+
+/*task content input*/
+#content{
+    width: 500px;
+}
+
+
+/* date */
+ .container1 div:nth-child(3){
+    position:relative;
+    top:37px;
+    max-width: fit-content;
+    float:left;
+    left:13.5%;
+    font-weight: bold;
+    font-size: 31px;
+}
+
+/* time */
+.container1 div:nth-child(4){
+    position:relative;
+    top:37px;
+    float:right;
+    right:20%;
+    font-weight: bold;
+    font-size: 31px;
+}
+
+#date , #time{
+    height:30px;
+}
+
+/* buttons -add note */
+.container1 button:nth-child(1){
+    position:relative;
+    top:60px;
+    left:30%;
+    font-size: 18px;
+}
+
+ /* buttons -reset */
+.container1 button:nth-child(2){
+    position:relative;
+    top:60px;
+    left:32%;
+    font-size: 18px;
+}
+
+
+
+
+#noteStatistics{
+    font-size:30px;
+    font-weight:bold;
+}
+
+
+
+.container{
+    width:95%;
+    margin:auto;
+    display:flex;
+}
+
+
+.note-boxes{  
+    width:100%;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+.box{
+    background-image: url('img/note.png');
+    background-size: 250px 300px;;
+    background-repeat: no-repeat;
+    min-width: 200px;
+    min-height: 250px;
+    max-width: 200px;
+    max-height: 250px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left:45px;
+    padding-top: 35px;
+    padding-right: 2%;
+  
+}
+
+.box:hover {
+    transform: scale(1.2);
+}
+
+#note-title {
+    top: 0;
+    left: -10px;
+    max-height: 27px;
+    text-align: center;
+    font-size: 1.5rem;
+    word-break: break-word;
+    overflow:auto;
+
+  }
+
+
+#note-content {
+    top: 60px;
+    left: -10px;
+    min-height: 140px;
+    max-height: 143px;
+    text-align: left;
+    font-size: 1.5rem;
+    word-break: break-word;
+    margin:10px;
+    overflow:auto;
+
+  }
+
+  #note-date {
+    bottom: 50px;
+    left: -10px;
+    margin-left:5%;
+  }
+  
+  #note-time {
+    bottom: 20px;
+    left: -10px;
+    margin-left:5%;
+  }
+
+  .fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+  }
+  
+@keyframes fadeInOpacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+
+.bi-x-circle{
+    display:none;
+    float:right;
+    position: relative;
+
+}
+
+.box:hover .bi-x-circle{
+	display:block;
+}
+

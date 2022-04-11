@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="stylesgood.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float" rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Waiting for the Sunrise' rel='stylesheet'>
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Main JS file -->
+    <script defer src="new.js"></script>
+
+    <title>Task Board</title>
+</head>
+
+<body>
+    <marquee class="font-effect-3d-float" width="100%" direction="right">Eliana📝</marquee>
+
+    <!-- big main container -->
+    <div class="main">
+
+        <!-- title -->
+        <div>
+            <h1 class="font-effect-shadow-multiple" >My Task board</h1>
+        </div>
+
+
+        <!-- Form container -->
+        <div class="container1" id="border">
+
+            <div>
+                <label for="task-title">task title: </label>
+                <input type="text" name="task-title" id="title" placeholder="task title" maxlength="24">
+            </div>
+            <div>
+                <label for="task-content">task*:</label>
+                <textarea id="content" placeholder="write note..." cols="200" rows="3" ></textarea> 
+            </div>
+
+            <div>
+                <label for="task-date">Date*:</label>
+                <input type="date" onblur="isvalid()" name="task-date" id="date">
+
+            </div>
+
+            <div>
+                <label for="task-time">Time:</label>
+                <input type="time" name="task-time" id="time">
+
+            </div>
+            <br><br>
+            <div  style="clear:both;">
+                <button type="submit" onclick="add()">Add Note</button>
+
+                <button type="reset" onclick="clearLocalStorage()">Reset</button>
+            </div>
+
+
+        </div>
+
+        <!-- # Notes -->
+        <div id="noteStatistics">0 Note(s) added</div>
+    </div>
+
+    <!-- notes container -->
+    <div class="container">
+        <div class="note-boxes">
+        </div>
+    </div>
+
+
+    </div>
+
+</body>
+
+</html>
